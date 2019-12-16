@@ -2,4 +2,7 @@
 
 # From https://github.com/smebberson/docker-alpine/tree/master/alpine-apache
 
-exec /usr/bin/svnserve -d --foreground -r /home/svn --listen-port 3690;
+# exec /usr/bin/svnserve -d --foreground -r /home/svn --listen-port 3690;
+
+# customerization
+exec /usr/bin/svnserve -d --memory-cache-size 1048576 --cache-txdeltas yes --cache-fulltexts yes --compression 0 --foreground -r /home/svn --listen-port 3690;

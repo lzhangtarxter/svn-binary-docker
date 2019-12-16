@@ -1,4 +1,4 @@
-[![Docker Image](https://img.shields.io/badge/docker%20image-available-green.svg)](https://hub.docker.com/r/elleflorio/svn-server/)
+[![Docker Image](https://img.shields.io/badge/docker%20image-available-green.svg)](https://hub.docker.com/r/lzhangtoolineo/svn-binary-docker/)
 
 # Description
 Lightweight container providing an SVN server, based on **Alpine Linux** and S6 process management (see [here](https://github.com/smebberson/docker-alpine) for details).
@@ -8,9 +8,12 @@ A complete tutorial on how to build this image, and how to run the container is 
 # Running Commands
 To run the image, you can use the following command:
 ```
-docker run -d --name svn-server -p 80:80 -p 3690:3690 elleflorio/svn-server
+docker run -d --name svn-server -p 8080:80 -p 3690:3690 lzhangtoolineo/svn-binary-docker
 ```
-You can optionally bind a local folder to the container folder that will store your repositories using the flag `-v <hostpath>:/home/svn`.
+You can optionally bind a local folder to the container folder that will store your repositories using the flag `-v <hostpath>:/home/svn`, which will be:
+```
+docker run -d --name svn-server -v <hostpath>:/home/svn -p 8080:80 -p 3690:3690 lzhangtoolineo/svn-binary-docker
+```
 
 # Configuration
 **You need to setup username and password** for the access via WebDav protocol. You can use the following command from your host machine:
