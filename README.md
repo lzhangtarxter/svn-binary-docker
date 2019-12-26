@@ -34,3 +34,4 @@ I'm super happy if you want to contribute! I do my best to keep this image updat
 If you find something that can be improved or the solution to some issue, just comment the issue to notify that you will handle it, and then submit a pull request. I will then merge it and publish the updated image in the Docker Hub. :wink:
 
 Thank you! :smile:
+
